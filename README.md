@@ -2,7 +2,9 @@
 # Hướng dẫn sử dụng git:
 - Đối với lần đầu sử dụng (AN, Thảo Trang, My) thì cần "clone" project từ trên git xuống
   + Sử dụng lệnh: git clone https://github.com/PhatNguyen1736/DoAnCK_Mobile.git
-- Sau đó mở folder vừa clone lên, code trong đó
+- Sau đó mở folder vừa clone lên, tạo các folder đặt tên Project_AnhNguyen, Project_My,Project_ThaoTrang
+- Sau đó mỗi người "di chuyển" vào project tương ứng rồi code trong đó
+  + Sử dụng lệnh: cd Project_AnhNguyen
 - Khi đã code xong, theo các bước sau để "push" code lên git
   + git add .
   + git commit -m "Noi dung thay doi (ghi ngan thoi, ko can ghi dai lam gi)"
