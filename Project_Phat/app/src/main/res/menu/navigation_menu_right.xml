@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:title="Tài khoản"
-          app:actionLayout="@drawable/hcn_trangthongtinkhac">
+    <item android:title="Tài khoản">
         <menu>
             <group android:checkableBehavior="single">
                 <item android:id="@+id/thongtincanhan"
@@ -18,8 +17,7 @@
         </menu>
     </item>
 
-    <item android:title="Nhà hàng"
-          app:actionLayout="@drawable/hcn_trangthongtinkhac">
+    <item android:title="Nhà hàng">
         <menu>
             <group android:checkableBehavior="single">
                 <item android:id="@+id/diachinhahanggan"
@@ -31,8 +29,7 @@
             </group>
         </menu>
     </item>
-    <item android:title="Liên hệ và góp ý"
-          app:actionLayout="@drawable/hcn_trangthongtinkhac">
+    <item android:title="Liên hệ và góp ý">
         <menu>
             <group android:checkableBehavior="single">
                 <item android:id="@+id/lienhevagopy"
@@ -41,8 +38,7 @@
             </group>
         </menu>
     </item>
-    <item android:title="Chính sách giao hàng"
-          app:actionLayout="@drawable/hcn_trangthongtinkhac">
+    <item android:title="Chính sách giao hàng">
         <menu>
             <group android:checkableBehavior="single">
                 <item android:id="@+id/chinhsachgiaohang"
@@ -58,8 +54,7 @@
     <group android:checkableBehavior="single">
     <item android:id="@+id/button_dangxuat"
         android:icon="@drawable/user"
-        android:title="Đăng xuất"
-        app:actionLayout="@drawable/hcn_trangthongtinkhac"/>
+        android:title="Đăng xuất" />
     </group>
 
 </menu>
