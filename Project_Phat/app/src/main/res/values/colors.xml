@@ -6,4 +6,5 @@
     <color name="colorPrimary">#FFFFFFFF</color>
     <color name="colorFace">#155EED</color>
     <color name="color_main">#C6E5B3</color>
+    <color name="custom_green">#C6E5B3</color>
 </resources>
