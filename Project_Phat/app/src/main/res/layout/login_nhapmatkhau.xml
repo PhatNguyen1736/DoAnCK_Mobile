@@ -33,7 +33,7 @@
         <LinearLayout
             android:id="@+id/form_login_bangmk"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="600dp"
             android:background="@drawable/hcn"
             android:gravity="center_horizontal"
             android:orientation="vertical">

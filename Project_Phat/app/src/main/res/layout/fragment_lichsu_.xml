@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Lichsu_Fragment"
+    android:background="@drawable/background_viewpager">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="341dp"
+                android:layout_height="154dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/frame_each_dish">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="39dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:id="@+id/txt_date1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/logo"
+                    android:fontFamily="@font/extralight"
+                    android:text="23/10/2023, 12:01pm - 1 sản phẩm"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/txt_goicuon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_date1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/logo"
+                    android:text="Gỏi cuốn                              x1" />
+
+                <ImageView
+                    android:id="@+id/image_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_goicuon"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/logo"
+                    android:src="@drawable/ic_ellipse_red" />
+
+                <TextView
+                    android:id="@+id/txt_ship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_goicuon"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/logo"
+                    android:text="Đơn hàng bị hủy"
+                    android:textColor="@color/red"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_setoi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="80dp"
+                    android:fontFamily="@font/extralight"
+                    android:text="Chi tiết"
+                    android:textSize="11dp" />
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="8dp"
+                        android:text="70.000đ"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_goicuon"
+                        android:layout_width="90dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/ic_goicuon" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Đặt lại"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frameLayout2"
+                android:layout_width="341dp"
+                android:layout_height="154dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/frame_each_dish">
+
+                <ImageView
+                    android:id="@+id/logo2"
+                    android:layout_width="39dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:id="@+id/txt_date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/logo2"
+                    android:fontFamily="@font/extralight"
+                    android:text="06/11/2023, 08:01pm - 2 sản phẩm"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/txt_canhnam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_date2"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/logo2"
+                    android:text="Canh nấm hạt sen              x1" />
+
+                <TextView
+                    android:id="@+id/txt_namrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_canhnam"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/logo2"
+                    android:text="Nấm rơm chiên xù             x1" />
+
+                <ImageView
+                    android:id="@+id/image_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_namrom"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/logo2"
+                    android:src="@drawable/ic_ellipse_red" />
+
+                <TextView
+                    android:id="@+id/txt_ship2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_namrom"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/logo2"
+                    android:text="Đơn hàng bị hủy"
+                    android:textColor="@color/red"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_chitiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="80dp"
+                    android:fontFamily="@font/extralight"
+                    android:text="Chi tiết"
+                    android:textSize="11dp" />
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_price2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="8dp"
+                        android:text="125.000đ"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_canhnam"
+                        android:layout_width="90dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/ic_canhnam" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Đặt lại"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frameLayout3"
+                android:layout_width="341dp"
+                android:layout_height="154dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/frame_each_dish">
+
+                <ImageView
+                    android:id="@+id/logo3"
+                    android:layout_width="39dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:id="@+id/txt_date3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/logo3"
+                    android:fontFamily="@font/extralight"
+                    android:text="17/09/2023, 17:30pm - 2 sản phẩm"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/txt_supbido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_date3"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/logo3"
+                    android:text="Súp bí đỏ                             x1" />
+
+                <TextView
+                    android:id="@+id/txt_dau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_supbido"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/logo3"
+                    android:text="Đậu hũ sốt cay                   x1" />
+
+                <ImageView
+                    android:id="@+id/image_green1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_dau"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/logo3"
+                    android:src="@drawable/ic_elipse" />
+
+                <TextView
+                    android:id="@+id/txt_ship3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_dau"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/logo3"
+                    android:text="Giao hàng thành công"
+                    android:textColor="@color/green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_chitiet3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="80dp"
+                    android:fontFamily="@font/extralight"
+                    android:text="Chi tiết"
+                    android:textSize="11dp" />
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_price3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="8dp"
+                        android:text="210.000đ"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_supbido"
+                        android:layout_width="90dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/ic_supbido" />
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Đặt lại"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

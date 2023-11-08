@@ -7,4 +7,15 @@
     <color name="colorFace">#155EED</color>
     <color name="color_main">#C6E5B3</color>
     <color name="custom_green">#C6E5B3</color>
+    <color name="grey">#4DFFFFFF</color>
+    <color name="green">#89C464</color>
+    <color name="bg_viewpager">#F0F0F0</color>
+    <color name="bg_tabbar">#C6E5B3</color>
+    <color name="red">#FC111F</color>
+    <color name="main">#C6E5B3</color>
+    <color name="main_50">#80C6E5B3</color>
+    <color name="green1">#63AB37</color>
+    <color name="grey2">#cccccc</color>
+    <color name="green_light">#F7FEE2</color>
+    <color name="grey1">#717572</color>
 </resources>

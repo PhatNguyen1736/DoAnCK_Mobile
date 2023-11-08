@@ -433,7 +433,7 @@
                         app:shapeAppearanceOverlay="@style/circular"
                         app:strokeColor="@color/color_main"
                         app:strokeWidth="5dp"
-                        tools:srcCompat="@drawable/comhaplasen" />
+                        tools:srcCompat="@drawable/comhaplasen1" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
