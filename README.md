@@ -11,5 +11,6 @@
   + git push origin master
 - Mỗi khi có thay đổi trên git, mà muốn update folder trong máy mình giống với trên git.
   Thì ta cần "pull" code từ trên git xuống.
+  + Đi vào folder cha chứa Project_Phat: cd Project_FoodOrder
   + Sử dụng lệnh: git pull origin master
 - Lặp lại gạch đầu dòng thứ 3 và thứ 4 cho đến khi qua môn!
