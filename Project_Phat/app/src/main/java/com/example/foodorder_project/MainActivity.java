@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_chitiet);
+        setContentView(R.layout.activity_main);
 //        ANH NGUYEN
        // Tạo danh sách thông tin đơn hàng
 //        ArrayList<String> orderInfoList = new ArrayList<>();
