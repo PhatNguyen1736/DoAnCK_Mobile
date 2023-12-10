@@ -320,7 +320,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:background="@color/main"
-            app:menu="@menu/nav_item" />
+            app:menu="@menu/navigation_menu_bottom" />
 
     </RelativeLayout>
 

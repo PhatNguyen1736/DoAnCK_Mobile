@@ -189,7 +189,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             app:backgroundTint="@color/custom_green"
-            app:menu="@menu/bottom_navigation_menu" />
+            app:menu="@menu/navigation_menu_bottom" />
 
     </RelativeLayout>
 
