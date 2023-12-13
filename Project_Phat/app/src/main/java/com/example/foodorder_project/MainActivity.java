@@ -7,32 +7,40 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
     private TabLayout tabLayout;
     private ViewPager2 viewPager2;
     private RelativeLayout dangvanchuyen;
 
     @SuppressLint("MissingInflatedId")
     private RecyclerView rclView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.trangthaidonhanghientai_lichsu);
+        setContentView(R.layout.chitietdonhang_dangchuanbi);
+    }
+
 //        ANH NGUYEN
-       // Tạo danh sách thông tin đơn hàng
+    // Tạo danh sách thông tin đơn hàng
 //        ArrayList<String> orderInfoList = new ArrayList<>();
 //        orderInfoList.add("Đơn hàng 2310JK\nĐơn hàng hiện đang trên đường giao đến bạn. Hãy chú ý theo dõi đơn hàng. Nhà hàng Tuệ Duyên xin cảm ơn!");
 //        orderInfoList.add("Đơn hàng 2308JK\nĐơn hàng đã giao thành công. Bạn hãy để lại đánh giá cho món ăn để chúng tôi có thể cải thiện chất lượng món ăn và khách hàng khác có thể hiểu thêm về món ăn nhé!");
 //
-        // Tạo ArrayAdapter
+    // Tạo ArrayAdapter
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, orderInfoList);
 
 //        // Liên kết ArrayAdapter với ListView
@@ -74,6 +82,5 @@ public class MainActivity extends AppCompatActivity {
 //                tabLayout.selectTab(tabLayout.getTabAt(position));
 //            }
 //        });
-
-    }
 }
+
