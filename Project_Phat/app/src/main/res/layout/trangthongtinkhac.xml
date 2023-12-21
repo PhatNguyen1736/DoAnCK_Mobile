@@ -499,7 +499,7 @@
         android:layout_height="match_parent"
         tools:ignore="MissingConstraints"
         app:menu="@menu/navigation_menu_right"
-        android:background="#E8FFDA"
+        android:background="@color/white"
         android:layout_gravity="start"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

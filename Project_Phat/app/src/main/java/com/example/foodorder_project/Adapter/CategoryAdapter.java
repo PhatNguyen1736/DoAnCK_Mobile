@@ -1,6 +1,7 @@
 package com.example.foodorder_project.Adapter;
 
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,18 +14,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.foodorder_project.Model.Category;
 import com.example.foodorder_project.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CateViewHolder> {
 
-    private List<Category> mListCate;
-    public CategoryAdapter(List<Category> mListCate) {
+    private ArrayList<Category> mListCate;
+    Context context;
+
+    public CategoryAdapter(Context context,ArrayList<Category> mListCate) {
         this.mListCate = mListCate;
+        this.context = context;
     }
     @NonNull
     @Override
     public CategoryAdapter.CateViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_menu, parent, false);
         return new CateViewHolder(view);
 
     }
@@ -32,11 +37,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CateVi
     @Override
     public void onBindViewHolder(@NonNull CategoryAdapter.CateViewHolder holder, int position) {
         Category cate = mListCate.get(position);
-        if(cate == null) {
-            return;
-        }
-        holder.imgCate.setImageResource(cate.getImage());
-        holder.tvName.setText(cate.getName());
+//        holder.imgCate.setImageResource(cate.image);
+        holder.tvName.setText(cate.nameCategory);
 
     }
 
@@ -45,15 +47,15 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CateVi
         if (mListCate != null) {
             return mListCate.size();
         }
-        return 0;
+        return mListCate.size();
     }
 
-    public class CateViewHolder extends RecyclerView.ViewHolder {
+    public static class CateViewHolder extends RecyclerView.ViewHolder {
         private ImageView imgCate;
         private TextView tvName;
         public CateViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgCate = itemView.findViewById(R.id.img_cate);
+//            imgCate = itemView.findViewById(R.id.img_cate);
             tvName = itemView.findViewById(R.id.tv_cate);
         }
     }

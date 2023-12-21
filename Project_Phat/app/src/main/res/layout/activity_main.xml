@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <LinearLayout
                 android:id="@+id/header_title"
                 android:layout_width="match_parent"
@@ -22,11 +23,42 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/imageView"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="225dp"
-                    android:src="@drawable/background_trangchu" />
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="225dp"
+                        android:src="@drawable/background_trangchu"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="-16dp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="64dp"
+                        android:layout_marginBottom="179dp"
+                        android:src="@drawable/icon_mess"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="179dp"
+                        android:src="@drawable/icon_chuong"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <EditText
                     android:id="@+id/editTextText"
@@ -45,128 +77,192 @@
                     android:textColor="@color/black" />
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/menu_theloai"
+            <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/hcn"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/header_title"
-                app:layout_constraintVertical_bias="0.033">
+                android:layout_height="140dp">
 
                 <LinearLayout
-                    android:id="@+id/menu_com"
-                    android:layout_width="0dp"
+                    android:id="@+id/menu_theloai"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/hcn"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/header_title"
+                    app:layout_constraintVertical_bias="0.033">
+
+                    <LinearLayout
+                        android:id="@+id/menu_com"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
 
 
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/img_Com"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        app:shapeAppearanceOverlay="@style/circular"
-                        app:strokeColor="@color/color_main"
-                        app:strokeWidth="5dp"
-                        android:src="@drawable/com" />
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/img_Com"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/icon_com"
+                            app:shapeAppearanceOverlay="@style/circular"
+                            app:strokeColor="@color/color_main"
+                            app:strokeWidth="5dp" />
 
-                    <TextView
-                        android:id="@+id/tx_Com"
-                        android:layout_width="75dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Cơm"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tx_Com"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Cơm"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/menu_Lau"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/img_Lau"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/icon_lau1"
+                            app:shapeAppearanceOverlay="@style/circular"
+                            app:strokeColor="@color/color_main"
+                            app:strokeWidth="5dp"
+                           />
+
+                        <TextView
+                            android:id="@+id/tx_Lau"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Lẩu"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/menu_Bun"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/img_Bun"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/icon_bun"
+                            app:shapeAppearanceOverlay="@style/circular"
+                            app:strokeColor="@color/color_main"
+                            app:strokeWidth="5dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/tx_Bun"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Bún/Phở"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/menu_Giaikhat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/img_Giaikhat"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/icon_giaikhat"
+                            app:shapeAppearanceOverlay="@style/circular"
+                            app:strokeColor="@color/color_main"
+                            app:strokeWidth="5dp"
+                          />
+
+                        <TextView
+                            android:id="@+id/tx_Giaikhat"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Giải Khát"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/menu_anvat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/img_anvat1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/icon_anvat1"
+                            app:shapeAppearanceOverlay="@style/circular"
+                            app:strokeColor="@color/color_main"
+                            app:strokeWidth="5dp"
+                            android:layout_marginLeft="10dp"/>
+
+                        <TextView
+                            android:id="@+id/tx_anvat"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Ăn vặt"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/menu_monkhac"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/img_monkhac"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/icon_anvat"
+                            app:shapeAppearanceOverlay="@style/circular"
+                            app:strokeColor="@color/color_main"
+                            app:strokeWidth="5dp" />
+
+                        <TextView
+                            android:id="@+id/tx_monkhac"
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Ăn vặt"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/menu_Lau"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/img_Lau"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        app:shapeAppearanceOverlay="@style/circular"
-                        app:strokeColor="@color/color_main"
-                        app:strokeWidth="5dp"
-                        android:src="@drawable/hotpot" />
-
-                    <TextView
-                        android:id="@+id/tx_Lau"
-                        android:layout_width="75dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Lẩu"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/menu_Bun"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/img_Bun"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        app:shapeAppearanceOverlay="@style/circular"
-                        app:strokeColor="@color/color_main"
-                        app:strokeWidth="5dp"
-                        android:src="@drawable/bun_pho" />
-
-                    <TextView
-                        android:id="@+id/tx_Bun"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Bún/Phở"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/menu_Giaikhat"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/img_Giaikhat"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        app:shapeAppearanceOverlay="@style/circular"
-                        app:strokeColor="@color/color_main"
-                        app:strokeWidth="5dp"
-                        android:src="@drawable/nuoc" />
-
-                    <TextView
-                        android:id="@+id/tx_Giaikhat"
-                        android:layout_width="85dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Giải Khát"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-            </LinearLayout>
+            </HorizontalScrollView>
 
             <LinearLayout
                 android:id="@+id/menu_hotdel"
@@ -227,7 +323,7 @@
 
                             <com.google.android.material.imageview.ShapeableImageView
                                 android:id="@+id/img_goitronchay"
-                                android:layout_width="200dp"
+                                android:layout_width="180dp"
                                 android:layout_height="195dp"
                                 app:shapeAppearanceOverlay="@style/circular"
                                 app:strokeColor="@color/color_main"
@@ -245,7 +341,7 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="Gỏi trộn chay"
-                                    android:textSize="22dp"
+                                    android:textSize="20dp"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -255,7 +351,7 @@
                                     android:gravity="center"
                                     android:text="210.000đ"
                                     android:textColor="#9C9999"
-                                    android:textSize="20dp" />
+                                    android:textSize="19dp" />
 
                                 <View
                                     android:layout_width="170dp"
@@ -284,7 +380,7 @@
 
                             <com.google.android.material.imageview.ShapeableImageView
                                 android:id="@+id/img_comxaobongcai"
-                                android:layout_width="200dp"
+                                android:layout_width="180dp"
                                 android:layout_height="195dp"
                                 app:shapeAppearanceOverlay="@style/circular"
                                 app:strokeColor="@color/color_main"
@@ -302,7 +398,7 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="Cơm xào bông cải"
-                                    android:textSize="22dp"
+                                    android:textSize="20dp"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -312,7 +408,7 @@
                                     android:gravity="center"
                                     android:text="170.000đ"
                                     android:textColor="#9C9999"
-                                    android:textSize="20dp" />
+                                    android:textSize="19dp" />
 
                                 <View
                                     android:layout_width="190dp"
@@ -396,7 +492,7 @@
 
                             <com.google.android.material.imageview.ShapeableImageView
                                 android:id="@+id/img_lauthai"
-                                android:layout_width="130dp"
+                                android:layout_width="120dp"
                                 android:layout_height="133dp"
                                 app:shapeAppearanceOverlay="@style/circular"
                                 app:strokeColor="@color/color_main"
@@ -410,12 +506,13 @@
 
                                 <TextView
                                     android:id="@+id/tx_Lauthai"
-                                    android:layout_width="120dp"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="Lẩu thái"
-                                    android:textSize="18dp"
-                                    android:textStyle="bold" />
+                                    android:textSize="17dp"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center"/>
 
                                 <ImageView
                                     android:layout_width="match_parent"
@@ -436,7 +533,7 @@
 
                             <com.google.android.material.imageview.ShapeableImageView
                                 android:id="@+id/img_Comhaplasen"
-                                android:layout_width="130dp"
+                                android:layout_width="120dp"
                                 android:layout_height="133dp"
                                 app:shapeAppearanceOverlay="@style/circular"
                                 app:strokeColor="@color/color_main"
@@ -450,12 +547,14 @@
 
                                 <TextView
                                     android:id="@+id/tx_comhaplasen"
-                                    android:layout_width="160dp"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="Cơm hấp lá sen"
-                                    android:textSize="18dp"
-                                    android:textStyle="bold" />
+                                    android:textSize="17dp"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center"
+                                    />
 
                                 <ImageView
                                     android:layout_width="match_parent"
@@ -474,7 +573,7 @@
 
                             <com.google.android.material.imageview.ShapeableImageView
                                 android:id="@+id/img_Comchienkhom"
-                                android:layout_width="130dp"
+                                android:layout_width="120dp"
                                 android:layout_height="133dp"
                                 app:shapeAppearanceOverlay="@style/circular"
                                 app:strokeColor="@color/color_main"
@@ -482,7 +581,7 @@
                                 android:src="@drawable/comchienkhom" />
 
                             <TextView
-                                android:layout_width="150dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="Cơm chiên khóm"
@@ -504,6 +603,7 @@
         </LinearLayout>
     </ScrollView>
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color_main"

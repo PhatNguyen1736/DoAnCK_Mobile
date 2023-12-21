@@ -11,5 +11,5 @@
         android:title="Giỏ hàng"/>
     <item android:id="@+id/bagach_id"
         android:icon="@drawable/icon_3gach"
-        android:title="Khác"/>
+        android:title="Khác" />
 </menu>
