@@ -204,7 +204,7 @@
                                         android:src="@drawable/location" />
 
                                 <TextView
-                                        android:id="@+id/nhahanggannhat"
+                                        android:id="@+id/nhahanggannhat1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="25dp"
@@ -225,7 +225,7 @@
                                         android:src="@drawable/phone" />
 
                                 <TextView
-                                        android:id="@+id/sdt_nhahanggannhat"
+                                        android:id="@+id/sdt_nhahanggannhat1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="25dp"
@@ -279,7 +279,7 @@
                                         android:src="@drawable/location" />
 
                                 <TextView
-                                        android:id="@+id/nhahanggannhat"
+                                        android:id="@+id/nhahanggannhat2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="25dp"
@@ -300,7 +300,7 @@
                                         android:src="@drawable/phone" />
 
                                 <TextView
-                                        android:id="@+id/sdt_nhahanggannhat"
+                                        android:id="@+id/sdt_nhahanggannhat2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="25dp"
@@ -351,7 +351,7 @@
                                         android:src="@drawable/location" />
 
                                 <TextView
-                                        android:id="@+id/nhahanggannhat"
+                                        android:id="@+id/nhahanggannhat3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="25dp"
@@ -372,7 +372,7 @@
                                         android:src="@drawable/phone" />
 
                                 <TextView
-                                        android:id="@+id/sdt_nhahanggannhat"
+                                        android:id="@+id/sdt_nhahanggannhat3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="25dp"
@@ -423,7 +423,7 @@
                                         android:src="@drawable/location" />
 
                                 <TextView
-                                        android:id="@+id/nhahanggannhat"
+                                        android:id="@+id/nhahanggannhat4"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="25dp"
@@ -444,7 +444,7 @@
                                         android:src="@drawable/phone" />
 
                                 <TextView
-                                        android:id="@+id/sdt_nhahanggannhat"
+                                        android:id="@+id/sdt_nhahanggannhat4"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="25dp"

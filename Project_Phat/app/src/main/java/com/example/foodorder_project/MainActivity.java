@@ -33,6 +33,7 @@ import com.example.foodorder_project.Model.Users;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -72,11 +73,24 @@ public class MainActivity extends AppCompatActivity  {
                 // Xử lý khi nhấn vào Thực đơn
             } else if (itemId == R.id.giohang_id) {
                 // Xử lý khi nhấn vào Giỏ hàng
+                     opengiohang();
             } else if (itemId == R.id.bagach_id) {
                 // Xử lý khi nhấn vào Khác
                 openbagach();
             }
             return true;
+        });
+
+
+        ShapeableImageView imgCom = findViewById(R.id.img_Com);
+
+        imgCom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Xử lý sự kiện click ở đây, ví dụ chuyển sang trang khác
+                Intent intent = new Intent(MainActivity.this, MenuChitiet_Activity.class);
+                startActivity(intent);
+            }
         });
     }
     // PHAT
@@ -96,7 +110,7 @@ public class MainActivity extends AppCompatActivity  {
         startActivity(intent);
     }
     private void opengiohang() {
-        Intent intent = new Intent(this, ThongtinkhacActivity.class);
+        Intent intent = new Intent(this, CartActivity.class);
         startActivity(intent);
     }
 

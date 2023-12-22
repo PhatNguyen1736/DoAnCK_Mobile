@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.WindowDecorActionBar;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodorder_project.Model.Cart;
@@ -21,9 +22,9 @@ public class MenuChitiet_Adapter extends RecyclerView.Adapter<MenuChitiet_Adapte
     private ArrayList<MenuChitiet> listmenu;
     private Context context;
 
-    public MenuChitiet_Adapter(ArrayList<MenuChitiet> listmenu, Context context) {
-        this.listmenu = listmenu;
+    public MenuChitiet_Adapter(Context context, ArrayList<MenuChitiet> listmenu) {
         this.context = context;
+        this.listmenu = listmenu;
     }
 
     @NonNull
@@ -35,32 +36,29 @@ public class MenuChitiet_Adapter extends RecyclerView.Adapter<MenuChitiet_Adapte
 
     @Override
     public void onBindViewHolder(@NonNull MenuChitiet_Adapter.MenuViewHolder holder, int position) {
-
-        holder.imgheart.setImageResource(listmenu.get(position).getImgheart());
-        holder.imgfood.setImageResource(listmenu.get(position).getImgfood());
-        holder.txtfoodname.setText(listmenu.get(position).getFoodname());
-        holder.txtprice.setText(listmenu.get(position).getPrice());
-        holder.txtevaluation.setText(listmenu.get(position).getEveluation());
-
+          MenuChitiet menuChitiet = listmenu.get(position);
+          holder.txtstar.setText(String.valueOf(menuChitiet.reviewStar));
+          holder.food_name.setText(menuChitiet.foodName);
+          holder.food_price.setText(String.valueOf(menuChitiet.price));
     }
 
     @Override
     public int getItemCount() {
+        if (listmenu != null) {
+            return listmenu.size();
+        }
         return listmenu.size();
     }
 
-    public class MenuViewHolder extends RecyclerView.ViewHolder {
+    public static class MenuViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imgheart, imgfood;
-        TextView txtfoodname, txtprice, txtevaluation;
+        TextView txtstar, food_name, food_price;
         public MenuViewHolder(@NonNull View itemView) {
             super(itemView);
+            txtstar= itemView.findViewById(R.id.txtstar);
+            food_name= itemView.findViewById(R.id.food_name);
+            food_price= itemView.findViewById(R.id.food_price);
 
-            imgheart = itemView.findViewById(R.id.img_heart);
-            imgfood = itemView.findViewById(R.id.image_food);
-            txtevaluation = itemView.findViewById(R.id.txtstar);
-            txtfoodname = itemView.findViewById(R.id.food_name);
-            txtprice = itemView.findViewById(R.id.food_price);
         }
     }
 

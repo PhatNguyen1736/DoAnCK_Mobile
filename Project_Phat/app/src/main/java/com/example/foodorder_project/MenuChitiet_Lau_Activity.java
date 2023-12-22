@@ -1,7 +1,5 @@
 package com.example.foodorder_project;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -11,10 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.foodorder_project.Adapter.CartAdapter;
-import com.example.foodorder_project.Adapter.CategoryAdapter;
 import com.example.foodorder_project.Adapter.MenuChitiet_Adapter;
-import com.example.foodorder_project.Model.Category;
 import com.example.foodorder_project.Model.MenuChitiet;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -24,7 +19,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class MenuChitiet_Activity extends AppCompatActivity {
+public class MenuChitiet_Lau_Activity extends AppCompatActivity {
     ArrayList<MenuChitiet> listmenu;
     RecyclerView recyclerView;
     MenuChitiet_Adapter menuChitiet_adapter;
@@ -41,7 +36,7 @@ public class MenuChitiet_Activity extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
         listmenu = new ArrayList<>();
-        menuChitiet_adapter = new MenuChitiet_Adapter(MenuChitiet_Activity.this, listmenu);
+        menuChitiet_adapter = new MenuChitiet_Adapter(MenuChitiet_Lau_Activity.this, listmenu);
 //         cateadapter1 = new CategoryAdapter(MenuActivity.this, catelist, (CategoryAdapter.CategoryClickListener) this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -60,7 +55,7 @@ public class MenuChitiet_Activity extends AppCompatActivity {
 //    }
 
     private void EventChangeListener() {
-        db.collection("Menu_Detail")
+        db.collection("Menu_Detail_Lau")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

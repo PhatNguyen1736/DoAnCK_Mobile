@@ -131,7 +131,8 @@
                             android:background="@drawable/hcn_login"
                             android:drawableRight="@drawable/icon_edit"
                             android:gravity="center"
-                            android:textSize="20dp" />
+                            android:textSize="20dp"
+                            android:text="1736@gmail.com"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -159,7 +160,8 @@
                             android:background="@drawable/hcn_login"
                             android:drawableRight="@drawable/icon_edit"
                             android:gravity="center"
-                            android:textSize="20dp" />
+                            android:textSize="20dp"
+                            android:text="0918262525"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -187,7 +189,8 @@
                             android:background="@drawable/hcn_login"
                             android:drawableRight="@drawable/icon_edit"
                             android:gravity="center"
-                            android:textSize="20dp" />
+                            android:textSize="20dp"
+                            android:text="Nam"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -215,7 +218,8 @@
                             android:background="@drawable/hcn_login"
                             android:drawableRight="@drawable/muiten"
                             android:gravity="center"
-                            android:textSize="20dp" />
+                            android:textSize="20dp"
+                            android:text="Khu phố 6, Linh Trung ,Thủ Đức"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -248,7 +252,8 @@
                                 android:background="@drawable/hcn_login"
                                 android:drawableRight="@drawable/icon_edit"
                                 android:gravity="center"
-                                android:textSize="20dp" />
+                                android:textSize="20dp"
+                                android:text="29/06/2002"/>
                         </LinearLayout>
                         <Button
                             android:id="@+id/button_update"
