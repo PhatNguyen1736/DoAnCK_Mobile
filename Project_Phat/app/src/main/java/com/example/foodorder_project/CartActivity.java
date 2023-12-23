@@ -3,6 +3,8 @@ package com.example.foodorder_project;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
@@ -32,7 +34,7 @@ public class CartActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         Intent intent = getIntent();
-        String receivedData2 = null;
+        String  receivedData2 = null;
         if (intent != null) {
             String receivedData3 = intent.getStringExtra("Image");
             String receivedData = intent.getStringExtra("Name");
@@ -44,7 +46,18 @@ public class CartActivity extends AppCompatActivity {
             listcart = new ArrayList<Cart>();
             listcart.add(new Cart(R.drawable.lauthai, receivedData, receivedData1, receivedData2, receivedData4));
         }
-
+        // Truy xuất dữ liệu trong listcart
+//        if (listcart != null && listcart.size() > 0) {
+//            // Lấy đối tượng Cart đầu tiên từ danh sách
+//            Cart firstCartItem = listcart.get(0);
+//
+//            // Lấy các thông tin từ đối tượng Cart
+////            int imageResource = firstCartItem.getImageResource();
+//            String name = firstCartItem.getFoodName();
+//            String quantity = firstCartItem.getQuantity();
+//            String price = firstCartItem.getPrice();
+//            String note = firstCartItem.getNote();
+//        }
 
         CartAdapter adapter = new CartAdapter(listcart, this);
         recyclerView.setAdapter(adapter);
@@ -58,6 +71,43 @@ public class CartActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        AppCompatButton btnthanhtoan = findViewById(R.id.btn_thanhtoan);
+        btnthanhtoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Kiểm tra xem danh sách có phần tử không
+                if (listcart != null && listcart.size() > 0) {
+                    Cart firstCartItem = listcart.get(0);
+
+                    // Lấy các giá trị từ firstCartItem
+                    String name = firstCartItem.getFoodName();
+                    String quantity = firstCartItem.getQuantity();
+                    String price = firstCartItem.getPrice();
+                    String note = firstCartItem.getNote();
+
+                    // Đặt giá trị vào Intent
+                    Intent intent2 = new Intent(CartActivity.this, DetailOrderActivity.class);
+
+                    intent2.putExtra("FoodName", name);
+                    intent2.putExtra("Quantity1", quantity);
+                    intent2.putExtra("Price1", price);
+                    intent2.putExtra("Note1", note);
+
+                    // Log thông tin để kiểm tra
+                    Log.d("CartItem", "Name: " + name);
+                    Log.d("CartItem", "Quantity: " + quantity);
+                    Log.d("CartItem", "Price: " + price);
+                    Log.d("CartItem", "Note: " + note);
+
+                    // Chuyển đến DetailOrderActivity với Intent đã đặt giá trị
+                    startActivity(intent2);
+                } else {
+                    // Xử lý khi danh sách không có phần tử
+                    // Ví dụ: Hiển thị thông báo, không thực hiện chuyển đến DetailOrderActivity
+                }
+            }
+        });
+
         totalPrice.setText(receivedData2);
 
     }

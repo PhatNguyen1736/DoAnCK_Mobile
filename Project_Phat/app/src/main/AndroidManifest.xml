@@ -120,6 +120,19 @@
             android:name=".ChitietMonAnActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".DetailOrderActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".DathangthanhcongActivity"
+            android:exported="true">
+        </activity>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBPZwKib0M5WhsuNNfpMoaU2G5c-yyijZw" />

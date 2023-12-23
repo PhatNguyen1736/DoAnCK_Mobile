@@ -5,16 +5,16 @@ public class Detail_order {
     private String FoodName;
     private String Quantity;
     private String Price;
-    private String Note;
+//    private String Note;
     public Detail_order() {
     }
 
-    public Detail_order(int foodPicture, String foodName, String quantity, String price, String note) {
+    public Detail_order(int foodPicture, String foodName, String quantity, String price) {
         FoodPicture = foodPicture;
         FoodName = foodName;
         Quantity = quantity;
         Price = price;
-        Note = note;
+//        Note = note;
     }
 
     public int getFoodPicture() {
@@ -49,13 +49,13 @@ public class Detail_order {
         Price = price;
     }
 
-    public String getNote() {
-        return Note;
-    }
-
-    public void setNote(String note) {
-        Note = note;
-    }
+//    public String getNote() {
+//        return Note;
+//    }
+//
+//    public void setNote(String note) {
+//        Note = note;
+//    }
 
 
 }

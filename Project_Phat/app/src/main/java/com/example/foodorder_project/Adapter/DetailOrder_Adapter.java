@@ -20,7 +20,7 @@ public class DetailOrder_Adapter extends RecyclerView.Adapter<DetailOrder_Adapte
     private ArrayList<Detail_order> listdetail;
     private Context context;
 
-    public DetailOrder_Adapter(ArrayList<Detail_order> listdetail, Context context) {
+    public DetailOrder_Adapter(ArrayList<Detail_order> listdetail , Context context) {
         this.listdetail = listdetail;
         this.context = context;
     }
@@ -39,12 +39,16 @@ public class DetailOrder_Adapter extends RecyclerView.Adapter<DetailOrder_Adapte
         holder.txtFoodName.setText(listdetail.get(position).getFoodName());
         holder.txtQuantity.setText(listdetail.get(position).getQuantity());
         holder.txtPrice.setText(listdetail.get(position).getPrice());
-        holder.txtNote.setText(listdetail.get(position).getNote());
+//        holder.txtNote.setText(listdetail.get(position).getNote());
 
     }
 
     @Override
     public int getItemCount() {
+
+        if (listdetail != null) {
+            return listdetail.size();
+        }
         return listdetail.size();
     }
 
@@ -55,9 +59,9 @@ public class DetailOrder_Adapter extends RecyclerView.Adapter<DetailOrder_Adapte
             super(itemView);
             FoodPicture = itemView.findViewById(R.id.img_food);
             txtFoodName = itemView.findViewById(R.id.food_name);
-            txtQuantity = itemView.findViewById(R.id.number_food);
+            txtQuantity = itemView.findViewById(R.id.sl);
             txtPrice = itemView.findViewById(R.id.price);
-            txtNote = itemView.findViewById(R.id.add_note);
+//            txtNote = itemView.findViewById(R.id.add_note);
         }
     }
 

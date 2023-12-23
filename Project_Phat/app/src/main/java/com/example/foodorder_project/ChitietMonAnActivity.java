@@ -20,6 +20,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.example.foodorder_project.Model.MenuChitiet;
 
+import java.util.List;
+
 public class ChitietMonAnActivity extends AppCompatActivity {
     MenuChitiet data;
 
@@ -43,7 +45,9 @@ public class ChitietMonAnActivity extends AppCompatActivity {
         radioGroup = findViewById(R.id.radgroup);
         addCart = findViewById(R.id.add);
         namefood = findViewById(R.id.name);
-
+        small = findViewById(R.id.radS);
+        large = findViewById(R.id.radL);
+        medium = findViewById(R.id.radM);
         // Set initial quantity and total price
         soluong.setText(String.valueOf(quantity));
         updateTotalPrice();
@@ -99,9 +103,7 @@ public class ChitietMonAnActivity extends AppCompatActivity {
         int selectedSizePrice = 0;
         int checkedId = radioGroup.getCheckedRadioButtonId();
 
-        if (checkedId == R.id.radS) {
-            // No price change for Size S
-        } else if (checkedId == R.id.radM) {
+        if (checkedId == R.id.radM) {
             selectedSizePrice = 50000;
         } else if (checkedId == R.id.radL) {
             selectedSizePrice = 80000;
@@ -110,6 +112,35 @@ public class ChitietMonAnActivity extends AppCompatActivity {
         int totalPrice = quantity * basePrice + selectedSizePrice;
         total.setText(String.valueOf(totalPrice) + "đ");
     }
+//private void updateTotalPrice() {
+//    int selectedSizePrice = 0;
+//    int checkedId = radioGroup.getCheckedRadioButtonId();  // Get the ID of the checked RadioButton
+//
+//    if (checkedId != -1) {  // Ensure a RadioButton is selected
+//        RadioButton checkedRadioButton = radioGroup.findViewById(checkedId);  // Find the corresponding RadioButton
+//
+//        // Calculate the price based on the checked RadioButton's ID
+//        selectedSizePrice = getPriceForSize(checkedId);
+//
+//        int totalPrice = quantity * basePrice + selectedSizePrice;
+//        total.setText(String.valueOf(totalPrice) + "đ");
+//    } else {
+//        // Handle the case when no RadioButton is selected
+//        total.setText("Vui lòng chọn kích thước"); // Example message
+//    }
+//}
+//
+//    private int getPriceForSize(int id) {
+//        if (id == R.id.radS) {
+//            return 0;
+//        } else if (id == R.id.radM) {
+//            return 50000;
+//        } else if (id == R.id.radL) {
+//            return 80000;
+//        } else {
+//            return -1;  // Handle unexpected cases
+//        }
+//    }
 }
 //        data = getIntent().getParcelableExtra("foodData");
 //        customPizzaPrice = getIntent().getIntExtra("CustomFoodPrice", 50);

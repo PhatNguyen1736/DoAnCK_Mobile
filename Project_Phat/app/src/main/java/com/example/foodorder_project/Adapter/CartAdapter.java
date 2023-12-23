@@ -1,6 +1,7 @@
 package com.example.foodorder_project.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.foodorder_project.ChitietMonAnActivity;
 import com.example.foodorder_project.Model.Cart;
 import com.example.foodorder_project.R;
 
@@ -41,6 +43,15 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         holder.txtPrice.setText(listcart.get(position).getPrice());
         holder.txtNote.setText(listcart.get(position).getNote());
 
+        holder.imgedit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Dựa vào giá trị position để xác định dòng nào được click
+                Intent intent = new Intent(context, ChitietMonAnActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -49,6 +60,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     }
 
     public class CartViewHolder extends RecyclerView.ViewHolder {
+        ImageView imgedit;
         ImageView FoodPicture;
         TextView txtFoodName, txtQuantity, txtPrice, txtNote;
         public CartViewHolder(@NonNull View itemView) {
@@ -58,6 +70,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             txtQuantity = itemView.findViewById(R.id.number_food);
             txtPrice = itemView.findViewById(R.id.price);
             txtNote = itemView.findViewById(R.id.add_note);
+            imgedit = itemView.findViewById(R.id.edit);
+
         }
     }
 

@@ -1,5 +1,6 @@
 package com.example.foodorder_project.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -41,7 +42,7 @@ public class MenuChitiet_Adapter extends RecyclerView.Adapter<MenuChitiet_Adapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MenuChitiet_Adapter.MenuViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MenuChitiet_Adapter.MenuViewHolder holder, @SuppressLint("RecyclerView") int position) {
           MenuChitiet menuChitiet = listmenu.get(position);
           holder.txtstar.setText(String.valueOf(menuChitiet.reviewStar));
           holder.food_name.setText(menuChitiet.foodName);
