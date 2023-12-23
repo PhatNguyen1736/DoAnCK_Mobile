@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdf78bef-9ee3-443e-adc1-d04f339e4bda" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_Phat/app/src/main/java/com/example/foodorder_project/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Phat/app/src/main/java/com/example/foodorder_project/MainActivity.java" afterDir="false" />
-    </list>
+    <list default="true" id="fdf78bef-9ee3-443e-adc1-d04f339e4bda" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +28,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "D:/DoAnMobile/Project_FoodOrder/Project_Phat"
+    "last_opened_file_path": "F:/Mobile/Final_Project2/Project_Phat"
   }
 }]]></component>
   <component name="RunManager">
