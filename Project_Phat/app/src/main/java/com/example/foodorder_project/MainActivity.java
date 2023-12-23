@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity  {
         });
     }
     // PHAT
-    private boolean isMainActivity() {
+  /*  private boolean isMainActivity() {
         // Kiểm tra xem đang ở MainActivity hay không
         return getClass().getSimpleName().equals(MainActivity.class.getSimpleName());
     }
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity  {
         Intent intent = new Intent(this, ThongtinkhacActivity.class);
         startActivity(intent);
     }
-
+*/
 
 
 

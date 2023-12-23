@@ -120,6 +120,23 @@
             android:name=".ChitietMonAnActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".icon_cai_chuongActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".voucherggActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".tintucnhahangActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".khuyenmaiActivity"
+            android:exported="true">
+        </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBPZwKib0M5WhsuNNfpMoaU2G5c-yyijZw" />
