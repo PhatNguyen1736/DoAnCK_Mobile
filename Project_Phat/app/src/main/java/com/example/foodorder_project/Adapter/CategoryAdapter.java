@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.foodorder_project.MenuChitiet_Activity;
 import com.example.foodorder_project.MenuChitiet_Lau_Activity;
+import com.example.foodorder_project.MenuChitiet_TrangMieng_Activity;
 import com.example.foodorder_project.Model.Category;
 import com.example.foodorder_project.R;
 
@@ -73,6 +74,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CateVi
                         // Mở Activity tương ứng với dòng 1
                         Intent intent1 = new Intent(context, MenuChitiet_Lau_Activity.class);
                         context.startActivity(intent1);
+                        break;
+                    case 4:
+                        // Mở Activity tương ứng với dòng 1
+                        Intent intent4 = new Intent(context, MenuChitiet_TrangMieng_Activity.class);
+                        context.startActivity(intent4);
                         break;
                     // Thêm các trường hợp khác nếu cần
                     default:

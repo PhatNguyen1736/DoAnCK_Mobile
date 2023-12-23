@@ -53,8 +53,13 @@ public class MainActivity extends AppCompatActivity  {
     Toolbar toolbar;
     NavigationView navigationViewRight;
     private RecyclerView rclView;
-
-    @Override
+    ShapeableImageView imgCom, imgLau,  imgTrangmieng;
+    public void Inuit(){
+        imgCom = findViewById(R.id.img_Com);
+        imgLau = findViewById(R.id.img_Lau);
+        imgTrangmieng = findViewById(R.id.img_Giaikhat);
+    }
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -80,15 +85,28 @@ public class MainActivity extends AppCompatActivity  {
             }
             return true;
         });
-
-
-        ShapeableImageView imgCom = findViewById(R.id.img_Com);
-
+        Inuit();
         imgCom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Xử lý sự kiện click ở đây, ví dụ chuyển sang trang khác
                 Intent intent = new Intent(MainActivity.this, MenuChitiet_Activity.class);
+                startActivity(intent);
+            }
+        });
+        imgLau.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Xử lý sự kiện click ở đây, ví dụ chuyển sang trang khác
+                Intent intent = new Intent(MainActivity.this, MenuChitiet_Lau_Activity.class);
+                startActivity(intent);
+            }
+        });
+        imgTrangmieng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Xử lý sự kiện click ở đây, ví dụ chuyển sang trang khác
+                Intent intent = new Intent(MainActivity.this, MenuChitiet_TrangMieng_Activity.class);
                 startActivity(intent);
             }
         });

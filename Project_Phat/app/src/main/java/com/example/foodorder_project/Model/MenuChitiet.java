@@ -5,14 +5,24 @@ public class MenuChitiet {
     public String foodName;
     public int price;
     public int reviewStar;
+    public String image;
 
     public MenuChitiet() {
     }
 
-    public MenuChitiet(String foodName, int price, int reviewStar) {
+    public MenuChitiet(String foodName, int price, int reviewStar, String image) {
         this.foodName = foodName;
         this.price = price;
         this.reviewStar = reviewStar;
+        this.image = image;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getFoodName() {

@@ -24,16 +24,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
 
         <activity
             android:name=".Login_passActivity"
             android:exported="true">
         </activity>
 
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+
         <activity
             android:name=".GoogleMapActivity"
             android:label="@string/app_name"
@@ -109,6 +110,14 @@
         </activity>
         <activity
             android:name=".MenuChitiet_Lau_Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".MenuChitiet_TrangMieng_Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ChitietMonAnActivity"
             android:exported="true">
         </activity>
         <meta-data

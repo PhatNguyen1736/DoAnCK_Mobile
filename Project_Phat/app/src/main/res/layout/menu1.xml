@@ -13,7 +13,7 @@
         android:layout_height="50dp"
         android:background="@color/main"
         android:gravity="center"
-        android:text="MENU"
+        android:text="Thực Đơn"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

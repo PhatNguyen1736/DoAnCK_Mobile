@@ -193,8 +193,7 @@
                             android:src="@drawable/icon_giaikhat"
                             app:shapeAppearanceOverlay="@style/circular"
                             app:strokeColor="@color/color_main"
-                            app:strokeWidth="5dp"
-                          />
+                            app:strokeWidth="5dp" />
 
                         <TextView
                             android:id="@+id/tx_Giaikhat"

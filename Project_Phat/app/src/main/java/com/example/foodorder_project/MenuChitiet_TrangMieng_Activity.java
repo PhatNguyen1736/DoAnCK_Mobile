@@ -19,7 +19,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class MenuChitiet_Lau_Activity extends AppCompatActivity {
+public class MenuChitiet_TrangMieng_Activity extends AppCompatActivity {
     ArrayList<MenuChitiet> listmenu;
     RecyclerView recyclerView;
     MenuChitiet_Adapter menuChitiet_adapter;
@@ -27,7 +27,7 @@ public class MenuChitiet_Lau_Activity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_chitiet_lau);
+        setContentView(R.layout.menu_chitiet_trangmieng);
 
         recyclerView = findViewById(R.id.recycleview_cart);
         recyclerView.setHasFixedSize(true);
@@ -36,7 +36,7 @@ public class MenuChitiet_Lau_Activity extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
         listmenu = new ArrayList<>();
-        menuChitiet_adapter = new MenuChitiet_Adapter(MenuChitiet_Lau_Activity.this, listmenu);
+        menuChitiet_adapter = new MenuChitiet_Adapter(MenuChitiet_TrangMieng_Activity.this, listmenu);
 //         cateadapter1 = new CategoryAdapter(MenuActivity.this, catelist, (CategoryAdapter.CategoryClickListener) this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -55,7 +55,7 @@ public class MenuChitiet_Lau_Activity extends AppCompatActivity {
 //    }
 
     private void EventChangeListener() {
-        db.collection("Menu_Detail_Lau")
+        db.collection("Menu_Detail_Trangmieng")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

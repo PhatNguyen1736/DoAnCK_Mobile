@@ -89,6 +89,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/totalPrice"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="810.000đ"
