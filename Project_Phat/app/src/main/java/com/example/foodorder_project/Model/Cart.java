@@ -7,8 +7,6 @@ public class Cart {
     private String Price;
     private String Note;
 
-    public Cart() {
-    }
 
     public Cart(int foodPicture, String foodName, String quantity, String price, String note) {
         FoodPicture = foodPicture;
@@ -18,7 +16,7 @@ public class Cart {
         Note = note;
     }
 
-    public int getFoodPicture() {
+    public int  getFoodPicture() {
         return FoodPicture;
     }
 

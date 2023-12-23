@@ -2,24 +2,28 @@ package com.example.foodorder_project.Model;
 
 
 public class Category {
-    private int image;
-    private String name;
-    public Category(int image, String name) {
-        this.image = image;
-        this.name = name;
+    public String nameCategory;
+    public String image;
+    public Category() {
     }
-    public int getImage(){
+
+    public Category(String image, String nameCategory) {
+        this.image = image;
+        this.nameCategory = nameCategory;
+    }
+    public String getImage(){
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
-    public String getName() {
-        return name;
+    public String getNameCategory() {
+        return nameCategory;
     }
-    public void setName(String name) {
-        this.name = name;
+
+    public void setNameCategory(String nameCategory) {
+        this.nameCategory = nameCategory;
     }
 }

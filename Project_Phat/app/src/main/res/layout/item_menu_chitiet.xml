@@ -9,15 +9,19 @@
 
     <LinearLayout
         android:id="@+id/cardView"
-        android:layout_width="190dp"
+        android:layout_width="170dp"
         android:layout_height="260dp"
         android:background="@drawable/edit_menu_bg"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
 
         <LinearLayout
             android:id="@+id/linear_star1"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:orientation="horizontal">
 
             <TextView
@@ -36,7 +40,8 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="75dp"
                 android:layout_marginTop="5dp"
-                android:src="@drawable/heart" />
+                android:src="@drawable/heart"
+                android:layout_marginRight="5dp"/>
         </LinearLayout>
 
         <LinearLayout

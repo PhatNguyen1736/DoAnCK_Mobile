@@ -8,12 +8,12 @@
 
     <ScrollView
         android:id="@+id/scrollview"
-        android:layout_width="match_parent"
-        android:layout_height="610dp"
+        android:layout_width="392dp"
+        android:layout_height="722dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linear_totalprice"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/linear_totalprice">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,27 +28,19 @@
                     android:id="@+id/img_food"
                     android:layout_width="413dp"
                     android:layout_height="276dp"
-                    android:src="@drawable/comhaplasen1"
                     android:background="@drawable/round_anh"
+                    android:src="@drawable/comhaplasen1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/back_button"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
 
                 <RelativeLayout
                     android:layout_width="60dp"
                     android:layout_height="30dp"
+                    android:layout_marginStart="25dp"
                     android:layout_marginTop="260dp"
                     android:background="@drawable/rounded"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginStart="25dp" >
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -78,32 +70,35 @@
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="260dp"
+                    android:layout_marginEnd="30dp"
                     android:background="@drawable/rounded"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    tools:layout_editor_absoluteX="290dp"
-                    android:layout_marginEnd="30dp">
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="290dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <ImageButton
-                            android:layout_width="30dp"
+                        <ImageView
+                            android:id="@+id/dec"
+                            android:layout_width="28dp"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded1"
                             android:src="@drawable/baseline_horizontal_rule_24" />
 
                         <TextView
+                            android:id="@+id/val"
                             android:layout_width="40dp"
                             android:layout_height="match_parent"
                             android:gravity="center"
                             android:text="02"
                             android:textStyle="bold" />
 
-                        <ImageButton
-                            android:layout_width="30dp"
+                        <ImageView
+                            android:id="@+id/inc"
+                            android:layout_width="28dp"
                             android:layout_height="match_parent"
                             android:background="@drawable/rounded1"
                             android:src="@drawable/baseline_add_24" />
@@ -111,6 +106,7 @@
                 </RelativeLayout>
 
                 <TextView
+                    android:id="@+id/name"
                     android:layout_width="201dp"
                     android:layout_height="41dp"
                     android:layout_marginStart="12dp"
@@ -123,6 +119,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/price"
                     android:layout_width="150dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="296dp"
@@ -158,8 +155,8 @@
                     android:id="@+id/size"
                     android:layout_width="56dp"
                     android:layout_height="36dp"
-                    android:layout_marginTop="2dp"
                     android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
                     android:text="Size"
                     android:textSize="21dp"
                     android:textStyle="bold"
@@ -180,7 +177,7 @@
                         android:id="@+id/radS"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Size S" />
+                        android:text="Size S"/>
 
                     <TextView
                         android:layout_width="370dp"
@@ -264,7 +261,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
         </LinearLayout>
     </ScrollView>
 
@@ -273,13 +269,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/re1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
+
         <LinearLayout
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tongcong"
                 android:layout_width="119dp"
@@ -287,42 +285,29 @@
                 android:layout_marginStart="12dp"
                 android:text="Tổng cộng"
                 android:textSize="21dp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/total"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="810.000đ"
-                android:textSize="21dp"
                 android:layout_marginStart="25dp"
+                android:text="110.000đ"
                 android:textColor="@color/green"
-                android:textStyle="bold"/>
+                android:textSize="21dp"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <ImageView
+            android:id="@+id/add"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="#E8FFDA"
-            android:src="@drawable/cart"
-            />
+            android:src="@drawable/cart" />
 
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/re1"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@color/main"
-            app:menu="@menu/navigation_menu_bottom" />
-
-    </RelativeLayout>
 
 
 

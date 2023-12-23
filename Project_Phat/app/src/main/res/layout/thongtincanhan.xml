@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ThongtincanhanActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -122,7 +123,7 @@
                             android:textSize="20dp"
                             android:textStyle="bold" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/tx_email1"
                             android:layout_width="360dp"
                             android:layout_height="45dp"
@@ -130,8 +131,8 @@
                             android:background="@drawable/hcn_login"
                             android:drawableRight="@drawable/icon_edit"
                             android:gravity="center"
-                            android:text="UIT@gmail.edu.vn"
-                            android:textSize="20dp" />
+                            android:textSize="20dp"
+                            android:text="1736@gmail.com"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -151,7 +152,7 @@
                             android:textSize="20dp"
                             android:textStyle="bold" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/tx_sdt1"
                             android:layout_width="360dp"
                             android:layout_height="45dp"
@@ -159,8 +160,8 @@
                             android:background="@drawable/hcn_login"
                             android:drawableRight="@drawable/icon_edit"
                             android:gravity="center"
-                            android:text="0918262526"
-                            android:textSize="20dp" />
+                            android:textSize="20dp"
+                            android:text="0918262525"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -180,7 +181,7 @@
                             android:textSize="20dp"
                             android:textStyle="bold" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/tx_gioitinh1"
                             android:layout_width="360dp"
                             android:layout_height="45dp"
@@ -188,8 +189,8 @@
                             android:background="@drawable/hcn_login"
                             android:drawableRight="@drawable/icon_edit"
                             android:gravity="center"
-                            android:text="Nam"
-                            android:textSize="20dp" />
+                            android:textSize="20dp"
+                            android:text="Nam"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -209,7 +210,7 @@
                             android:textSize="20dp"
                             android:textStyle="bold" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/tx_diachigiaohang1"
                             android:layout_width="360dp"
                             android:layout_height="45dp"
@@ -217,8 +218,8 @@
                             android:background="@drawable/hcn_login"
                             android:drawableRight="@drawable/muiten"
                             android:gravity="center"
-                            android:text="Khu phố 6, Linh Trung, TP.Thủ Đức"
-                            android:textSize="20dp" />
+                            android:textSize="20dp"
+                            android:text="Khu phố 6, Linh Trung ,Thủ Đức"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -243,7 +244,7 @@
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:id="@+id/tx_ngaysinh1"
                                 android:layout_width="360dp"
                                 android:layout_height="45dp"
@@ -251,15 +252,15 @@
                                 android:background="@drawable/hcn_login"
                                 android:drawableRight="@drawable/icon_edit"
                                 android:gravity="center"
-                                android:text="29/06/2002"
-                                android:textSize="20dp" />
+                                android:textSize="20dp"
+                                android:text="29/06/2002"/>
                         </LinearLayout>
                         <Button
-                            android:id="@+id/button_dangnhap"
+                            android:id="@+id/button_update"
                             android:layout_width="300dp"
                             android:layout_height="55dp"
                             android:background="@drawable/custom_button_white"
-                            android:text="Đăng nhập"
+                            android:text="Cập Nhật"
                             android:textColor="@color/black"
                             android:layout_gravity="center"
                             android:textSize="19dp" />
