@@ -57,12 +57,13 @@
 
                         <TextView
                             android:id="@+id/feedback"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
                             android:gravity="center"
-                            android:text="4.9"
+                            android:text="5"
                             tools:layout_editor_absoluteX="200dp"
-                            tools:layout_editor_absoluteY="297dp" />
+                            tools:layout_editor_absoluteY="297dp"
+                            android:textSize="20dp"/>
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -276,7 +277,8 @@
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
 
             <TextView
                 android:id="@+id/tongcong"
@@ -301,7 +303,8 @@
         <ImageView
             android:id="@+id/add"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="20dp"
             android:background="#E8FFDA"
             android:src="@drawable/cart" />
 

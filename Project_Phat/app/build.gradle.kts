@@ -35,7 +35,9 @@ android {
 dependencies {
 
     //noinspection GradleCompatible
+
     implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation ("androidx.exifinterface:exifinterface:1.3.3")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.material:material:1.10.0")

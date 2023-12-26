@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:ignore="MissingConstraints">
+    tools:ignore="MissingConstraints"
+    tools:context=".FeedbackAcivity">
 
     <LinearLayout
         android:id="@+id/linear_topic"
@@ -12,18 +13,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/back_button"
-            android:layout_width="45dp"
-            android:layout_height="48dp"
-            android:background="@color/white"
-            android:src="@drawable/back_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/detail_order"
-            android:layout_width="365dp"
+            android:layout_width="match_parent"
             android:layout_height="47dp"
             android:background="@color/white"
             android:gravity="center"
@@ -67,9 +59,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4.9"
+                    android:text="5"
                     android:textSize="45sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -145,7 +137,7 @@
                 android:padding="5dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="90dp"
+                    android:layout_width="85dp"
                     android:layout_height="55dp"
                     android:background="@drawable/rounded_green"
                     android:layout_gravity="center"
@@ -184,7 +176,7 @@
                 android:padding="5dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="90dp"
+                    android:layout_width="85dp"
                     android:layout_height="55dp"
                     android:background="@drawable/rounded_green"
                     android:layout_gravity="center"
@@ -231,7 +223,7 @@
                 android:padding="5dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="90dp"
+                    android:layout_width="85dp"
                     android:layout_height="55dp"
                     android:background="@drawable/rounded_green"
                     android:layout_gravity="center"
@@ -278,7 +270,7 @@
                 android:padding="5dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="90dp"
+                    android:layout_width="85dp"
                     android:layout_height="55dp"
                     android:background="@drawable/rounded_green"
                     android:layout_gravity="center"
@@ -317,11 +309,13 @@
     </LinearLayout>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="430dp"
+        android:layout_width="389dp"
+        android:layout_height="525dp"
         android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linear_danhgia"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -335,9 +329,9 @@
                 android:layout_height="130dp"
                 android:background="@drawable/rounded_green"
                 android:padding="5dp"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:id="@+id/img_LamTraMy"
@@ -353,29 +347,29 @@
                     android:id="@+id/tv_name_LamTraMy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="Lâm Trà My"
                     android:textSize="19sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="10dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/img_LamTraMy"/>
+                    app:layout_constraintStart_toEndOf="@+id/img_LamTraMy"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_icon_like"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <LinearLayout
                     android:id="@+id/star_LamTraMy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal"
                     android:layout_marginLeft="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_name_LamTraMy"
-                    app:layout_constraintStart_toEndOf="@+id/img_LamTraMy">
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toEndOf="@+id/img_LamTraMy"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name_LamTraMy">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -406,35 +400,35 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
                     android:text="9:30 25/10/2023"
+                    android:textColor="@color/grey1"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="@color/grey1"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginLeft="10dp"
                     app:layout_constraintStart_toEndOf="@+id/star_LamTraMy"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Phân loại: Lẩu thái chay (rau thêm, bún thêm)"
-                    android:textSize="12sp"
-                    android:textColor="@color/grey1"
                     android:layout_marginLeft="10dp"
+                    android:text="Phân loại: Lẩu thái chay (rau thêm, bún thêm)"
+                    android:textColor="@color/grey1"
+                    android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/img_LamTraMy"
-                    app:layout_constraintTop_toBottomOf="@+id/star_LamTraMy"/>
+                    app:layout_constraintTop_toBottomOf="@+id/star_LamTraMy" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="9dp"
                     android:text="Lẩu ngon xuất sắc, ăn vừa miệng, giao hàng nhanh, nên đặt nha mọi người ơi."
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="9dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             <!--            END LAMTRAMY-->
@@ -444,12 +438,12 @@
                 android:id="@+id/constraint_NguyenAnhNguyen"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/rounded_green"
                 android:padding="5dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/constraint_LamTraMy"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/constraint_LamTraMy">
 
                 <ImageView
                     android:id="@+id/img_NguyenAnhNguyen"
@@ -465,29 +459,29 @@
                     android:id="@+id/tv_name_NguyenAnhNguyen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="Nguyễn Anh Nguyên"
                     android:textSize="19sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="10dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/img_NguyenAnhNguyen"/>
+                    app:layout_constraintStart_toEndOf="@+id/img_NguyenAnhNguyen"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_icon_like"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <LinearLayout
                     android:id="@+id/star_NguyenAnhNguyen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal"
                     android:layout_marginLeft="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_name_NguyenAnhNguyen"
-                    app:layout_constraintStart_toEndOf="@+id/img_NguyenAnhNguyen">
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toEndOf="@+id/img_NguyenAnhNguyen"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name_NguyenAnhNguyen">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -518,35 +512,35 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
                     android:text="21:55 05/10/2023"
+                    android:textColor="@color/grey1"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="@color/grey1"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginLeft="10dp"
                     app:layout_constraintStart_toEndOf="@+id/star_NguyenAnhNguyen"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Phân loại: Lẩu thái"
-                    android:textSize="12sp"
-                    android:textColor="@color/grey1"
                     android:layout_marginLeft="10dp"
+                    android:text="Phân loại: Lẩu thái"
+                    android:textColor="@color/grey1"
+                    android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/img_NguyenAnhNguyen"
-                    app:layout_constraintTop_toBottomOf="@+id/star_NguyenAnhNguyen"/>
+                    app:layout_constraintTop_toBottomOf="@+id/star_NguyenAnhNguyen" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="9dp"
                     android:text="Lẩu ngon xuất sắc, mình ăn ở đây nhiều lần rồi, lần nào cũng như lần đầu."
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="9dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             <!--            END NGUYENANHNGUYEN-->
@@ -556,12 +550,12 @@
                 android:id="@+id/constraint_HoangThiThaoTrang"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/rounded_green"
                 android:padding="5dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/constraint_NguyenAnhNguyen"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/constraint_NguyenAnhNguyen">
 
                 <ImageView
                     android:id="@+id/img_HoangThiThaoTrang"
@@ -577,29 +571,29 @@
                     android:id="@+id/tv_name_HoangThiThaoTrang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="Hoàng Thị Thảo Trang"
                     android:textSize="19sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="10dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/img_HoangThiThaoTrang"/>
+                    app:layout_constraintStart_toEndOf="@+id/img_HoangThiThaoTrang"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_icon_like"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <LinearLayout
                     android:id="@+id/star_HoangThiThaoTrang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal"
                     android:layout_marginLeft="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_name_HoangThiThaoTrang"
-                    app:layout_constraintStart_toEndOf="@+id/img_HoangThiThaoTrang">
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toEndOf="@+id/img_HoangThiThaoTrang"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name_HoangThiThaoTrang">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -630,35 +624,35 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
                     android:text="11:35 01/10/2023"
+                    android:textColor="@color/grey1"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="@color/grey1"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginLeft="10dp"
                     app:layout_constraintStart_toEndOf="@+id/star_HoangThiThaoTrang"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Phân loại: Lẩu thái"
-                    android:textSize="12sp"
-                    android:textColor="@color/grey1"
                     android:layout_marginLeft="10dp"
+                    android:text="Phân loại: Lẩu thái"
+                    android:textColor="@color/grey1"
+                    android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/img_HoangThiThaoTrang"
-                    app:layout_constraintTop_toBottomOf="@+id/star_HoangThiThaoTrang"/>
+                    app:layout_constraintTop_toBottomOf="@+id/star_HoangThiThaoTrang" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="9dp"
                     android:text="Lẩu ngon xuất sắc, mình ăn ở đây nhiều lần rồi, lần nào cũng như lần đầu."
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="9dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             <!--            END HOANGTHITHAOTRANG-->
@@ -668,12 +662,12 @@
                 android:id="@+id/constraint_NguyenTanPhat"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/rounded_green"
                 android:padding="5dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/constraint_HoangThiThaoTrang"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/constraint_HoangThiThaoTrang">
 
                 <ImageView
                     android:id="@+id/img_NguyenTanPhat"
@@ -689,29 +683,29 @@
                     android:id="@+id/tv_name_NguyenTanPhat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="Nguyễn Tấn Phát"
                     android:textSize="19sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="10dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/img_NguyenTanPhat"/>
+                    app:layout_constraintStart_toEndOf="@+id/img_NguyenTanPhat"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_icon_like"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <LinearLayout
                     android:id="@+id/star_NguyenTanPhat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal"
                     android:layout_marginLeft="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_name_NguyenTanPhat"
-                    app:layout_constraintStart_toEndOf="@+id/img_NguyenTanPhat">
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toEndOf="@+id/img_NguyenTanPhat"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name_NguyenTanPhat">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -742,35 +736,35 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
                     android:text="14:53 29/09/2023"
+                    android:textColor="@color/grey1"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="@color/grey1"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginLeft="10dp"
                     app:layout_constraintStart_toEndOf="@+id/star_NguyenTanPhat"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Phân loại: Lẩu thái"
-                    android:textSize="12sp"
-                    android:textColor="@color/grey1"
                     android:layout_marginLeft="10dp"
+                    android:text="Phân loại: Lẩu thái"
+                    android:textColor="@color/grey1"
+                    android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/img_NguyenTanPhat"
-                    app:layout_constraintTop_toBottomOf="@+id/star_NguyenTanPhat"/>
+                    app:layout_constraintTop_toBottomOf="@+id/star_NguyenTanPhat" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="9dp"
                     android:text="Lẩu ngon xuất sắc, mình ăn ở đây nhiều lần rồi, lần nào cũng như lần đầu."
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="9dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             <!--            END NGUYENTANPHAT-->
@@ -781,20 +775,20 @@
 
     </ScrollView>
 
-    <RelativeLayout
-        android:id="@+id/re1"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        app:layout_constraintBottom_toBottomOf="parent" >
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
-            android:background="@color/main"
-            app:menu="@menu/navigation_menu_bottom" />
+    <!--    <RelativeLayout-->
+<!--        android:id="@+id/re1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent" >-->
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/bottom_nav"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="0dp"-->
+<!--            android:background="@color/main"-->
+<!--            app:menu="@menu/navigation_menu_bottom" />-->
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

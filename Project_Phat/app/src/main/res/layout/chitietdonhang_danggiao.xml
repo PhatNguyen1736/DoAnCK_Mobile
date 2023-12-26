@@ -2,14 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DanggiaoActivity">
 
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/txt_chitietdonhang"
             android:layout_width="match_parent"
@@ -61,7 +63,7 @@
                 android:layout_height="60dp"
                 android:layout_toRightOf="@+id/rela_mota"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="30dp"
                 android:src="@drawable/ic_truck"/>
         </RelativeLayout>
 
@@ -78,7 +80,11 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:max="3"
-                android:progress="2" />
+                android:progress="2"
+                android:splitTrack="false"
+                android:saveEnabled="false"
+                android:progressTint="@color/green"
+                android:thumbTint="@color/green" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -138,20 +144,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Hoàng Thị Thảo Trang"
+                    android:text="Nguyễn Tấn Phát"
                     android:layout_marginLeft="14dp"
                     android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="0967601811"
+                    android:text="0918262525"
                     android:layout_marginLeft="14dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Phường Hiệp Thành, quận 12, TPHCM"
+                    android:text="Khu phố 6, Linh Trung, TP.Thủ Đức"
                     android:layout_marginLeft="14dp"
                     android:layout_marginBottom="10dp"/>
             </LinearLayout>
@@ -212,7 +218,7 @@
         <RelativeLayout
             android:id="@+id/relative_thongtindonhang"
             android:layout_width="370dp"
-            android:layout_height="408dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/relative_thongtinvanchuyen"
             android:layout_centerHorizontal="true">
             <TextView
@@ -228,192 +234,82 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txt_thongtindonhang"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="6dp"
                 android:background="@drawable/border_background"
                 android:orientation="vertical">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:id="@+id/txt_madonhang"
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
-                        android:text="Mã đơn hàng"
+                        android:layout_marginLeft="14dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginLeft="14dp"/>
+                        android:text="Mã đơn hàng" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="DH01"
-                        android:layout_toRightOf="@+id/txt_madonhang"
+                        android:layout_marginLeft="14dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginLeft="14dp"/>
+                        android:layout_toRightOf="@+id/txt_madonhang"
+                        android:text="DH01" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/relative_time_dathang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:id="@+id/txt_time_dathang"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Thời gian đặt hàng"
+                        android:layout_marginLeft="14dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginLeft="14dp"/>
+                        android:text="Thời gian đặt hàng" />
 
                     <TextView
+                        android:id="@+id/ngaydat"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="18/11/2023, 18:11pm"
-                        android:layout_toRightOf="@+id/txt_time_dathang"
-                        android:layout_marginTop="10dp"
                         android:layout_marginLeft="14dp"
-                        android:gravity="right"/>
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/txt_time_dathang"
+                        android:gravity="right"
+                        android:text="18/11/2023, 18:11pm" />
 
                     <View
                         android:layout_width="350dp"
                         android:layout_height="1dp"
-                        android:background="@color/black"
-                        android:layout_centerHorizontal="true"
                         android:layout_below="@+id/txt_time_dathang"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"/>
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/black" />
                 </RelativeLayout>
-                
-                <RelativeLayout
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
-                    <ImageView
-                        android:id="@+id/img_donhang1"
-                        android:layout_width="54dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/ic_lauchay"
-                        android:layout_marginLeft="14dp"
-                        android:scaleType="fitXY"/>
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/txt_monan"
-                        android:layout_width="150dp"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycle_giao"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/img_donhang1"
-                        android:text="Lẩu chay"
-                        android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"/>
-
-                    <TextView
-                        android:id="@+id/txt_soluong"
-                        android:layout_width="20dp"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txt_monan"
-                        android:text="1"
-                        android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:id="@+id/txt_gia"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txt_soluong"
-                        android:text="150.000đ"
-                        android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"
-                        android:gravity="right"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
-                    <ImageView
-                        android:id="@+id/img_donhang2"
-                        android:layout_width="54dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/ic_comchienkhom"
-                        android:layout_marginLeft="14dp"
-                        android:scaleType="fitXY"/>
-
-                    <TextView
-                        android:id="@+id/txt_monan2"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/img_donhang2"
-                        android:text="Cơm chiên khóm"
-                        android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"/>
-
-                    <TextView
-                        android:id="@+id/txt_soluong2"
-                        android:layout_width="20dp"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txt_monan2"
-                        android:text="1"
-                        android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:id="@+id/txt_gia2"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txt_soluong2"
-                        android:text="60.000đ"
-                        android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"
-                        android:gravity="right"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
-                    <ImageView
-                        android:id="@+id/img_donhang3"
-                        android:layout_width="54dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/ic_supraucu"
-                        android:layout_marginLeft="14dp"
-                        android:scaleType="fitXY"/>
-
-                    <TextView
-                        android:id="@+id/txt_monan3"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/img_donhang3"
-                        android:text="Súp rau củ"
-                        android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"/>
-
-                    <TextView
-                        android:id="@+id/txt_soluong3"
-                        android:layout_width="20dp"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txt_monan3"
-                        android:text="1"
-                        android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:id="@+id/txt_gia3"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txt_soluong3"
-                        android:text="50.000đ"
-                        android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"
-                        android:gravity="right"/>
-                </RelativeLayout>
+                        android:layout_marginBottom="10dp"></androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
 
                 <View
                     android:layout_width="350dp"
                     android:layout_height="1dp"
-                    android:background="@color/black"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/black" />
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -424,35 +320,35 @@
                         android:id="@+id/txt_tongdonhang"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:text="Tổng"
-                        android:textStyle="bold"
-                        android:textSize="15dp"
+                        android:layout_centerVertical="true"
                         android:layout_marginLeft="170dp"
-                        android:layout_centerVertical="true"/>
+                        android:text="Tổng"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_soluongtong"
-                        android:layout_width="20dp"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txt_tongdonhang"
-                        android:text="3"
-                        android:textStyle="bold"
-                        android:textSize="15dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_centerVertical="true"
-                        android:gravity="center"/>
+                        android:layout_marginLeft="22dp"
+                        android:layout_toRightOf="@+id/txt_tongdonhang"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_giatong"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txt_soluongtong"
-                        android:text="260.000đ"
-                        android:textStyle="bold"
-                        android:textSize="15dp"
-                        android:layout_marginLeft="10dp"
                         android:layout_centerVertical="true"
-                        android:gravity="right"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/txt_soluongtong"
+                        android:gravity="right"
+                        android:text="260.000đ"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -464,19 +360,19 @@
                         android:id="@+id/txt_phivanchuyen"
                         android:layout_width="190dp"
                         android:layout_height="wrap_content"
-                        android:text="Phí vận chuyển"
+                        android:layout_centerVertical="true"
                         android:layout_marginLeft="14dp"
-                        android:layout_centerVertical="true"/>
+                        android:text="Phí vận chuyển" />
 
                     <TextView
                         android:id="@+id/txt_giavanchuyen"
                         android:layout_width="137dp"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txt_phivanchuyen"
-                        android:text="0đ"
-                        android:layout_marginLeft="10dp"
                         android:layout_centerVertical="true"
-                        android:gravity="right"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/txt_phivanchuyen"
+                        android:gravity="right"
+                        android:text="0đ" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -488,19 +384,19 @@
                         android:id="@+id/txt_voucher"
                         android:layout_width="190dp"
                         android:layout_height="wrap_content"
-                        android:text="Voucher giảm giá"
+                        android:layout_centerVertical="true"
                         android:layout_marginLeft="14dp"
-                        android:layout_centerVertical="true"/>
+                        android:text="Voucher giảm giá" />
 
                     <TextView
                         android:id="@+id/txt_giavoucher"
                         android:layout_width="137dp"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txt_voucher"
-                        android:text="-10.000đ"
-                        android:layout_marginLeft="10dp"
                         android:layout_centerVertical="true"
-                        android:gravity="right"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/txt_voucher"
+                        android:gravity="right"
+                        android:text="-25.000đ" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -512,25 +408,25 @@
                         android:id="@+id/txt_thanhtien"
                         android:layout_width="190dp"
                         android:layout_height="wrap_content"
-                        android:text="Thành tiền"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/red"
+                        android:layout_centerVertical="true"
                         android:layout_marginLeft="14dp"
-                        android:layout_centerVertical="true"/>
+                        android:text="Thành tiền"
+                        android:textColor="@color/red"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_giathanhtien"
                         android:layout_width="137dp"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txt_thanhtien"
-                        android:text="250.000đ"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/red"
-                        android:layout_marginLeft="10dp"
                         android:layout_centerVertical="true"
-                        android:gravity="right"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/txt_thanhtien"
+                        android:gravity="right"
+                        android:text="250.000đ"
+                        android:textColor="@color/red"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
                 </RelativeLayout>
 
             </LinearLayout>
@@ -548,7 +444,8 @@
                 android:layout_height="wrap_content"
                 android:text="Phương thức thanh toán"
                 android:textStyle="bold"
-                android:textSize="15dp" />
+                android:textSize="15dp"
+                android:layout_marginTop="8dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -566,8 +463,8 @@
                     android:layout_marginBottom="10dp"/>
             </LinearLayout>
         </RelativeLayout>
-        
-        <Button
+
+        <TextView
             android:id="@+id/btn_nhanduocmon"
             android:layout_width="300dp"
             android:layout_height="60dp"
@@ -575,16 +472,12 @@
             android:layout_centerHorizontal="true"
             android:text="Đã nhận được món ăn"
             android:textSize="19dp"
-            android:layout_marginBottom="10dp"/>
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:background="@color/bg_tabbar"
-            app:menu="@menu/navigation_menu_bottom"
-            android:layout_below="@+id/btn_nhanduocmon"/>
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@drawable/hcn_trangthongtinkhac"/>
 
     </RelativeLayout>
 </ScrollView>
+
 </RelativeLayout>

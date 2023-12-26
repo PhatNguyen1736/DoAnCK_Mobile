@@ -195,11 +195,11 @@
                     android:hint="Chọn voucher"
                     android:gravity="center"
                     android:textSize="13dp"
-                    app:layout_constraintEnd_toStartOf="@id/arrow2"
+                    app:layout_constraintEnd_toStartOf="@id/icon_voucher"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/arrow2"
+                    android:id="@+id/icon_voucher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
@@ -456,12 +456,12 @@
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent" >
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav"
+            android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="0dp"
-            android:background="@color/main"
+            android:background="@color/white"
             app:menu="@menu/navigation_menu_bottom" />
 
     </RelativeLayout>

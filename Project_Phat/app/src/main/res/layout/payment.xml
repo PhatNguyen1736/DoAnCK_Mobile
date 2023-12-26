@@ -40,25 +40,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
-        <ImageView
-            android:id="@+id/img_money"
-            android:layout_width="39dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="12dp"
-            android:src="@drawable/money"
-            app:layout_constraintStart_toStartOf="@id/tienMat"
-            app:layout_constraintTop_toTopOf="@id/tienMat" />
+    <ImageView
+        android:id="@+id/img_money"
+        android:layout_width="39dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/money"
+        app:layout_constraintStart_toStartOf="@id/tienMat"
+        app:layout_constraintTop_toTopOf="@id/tienMat" />
 
-        <ImageView
-            android:id="@+id/img_tick"
-            android:layout_width="39dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="17dp"
-            android:src="@drawable/accept_1"
-            app:layout_constraintEnd_toEndOf="@id/tienMat"
-            app:layout_constraintTop_toTopOf="@id/tienMat" />
+    <ImageView
+        android:id="@+id/img_tick"
+        android:layout_width="39dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="17dp"
+        android:src="@drawable/accept_1"
+        app:layout_constraintEnd_toEndOf="@id/tienMat"
+        app:layout_constraintTop_toTopOf="@id/tienMat" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,15 +80,15 @@
         android:background="@drawable/rounded_green"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tienMat" />
-        <ImageView
-            android:id="@+id/img_momo"
-            android:layout_width="39dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="12dp"
-            android:src="@drawable/momo"
-            app:layout_constraintStart_toStartOf="@id/momo"
-            app:layout_constraintTop_toTopOf="@id/momo" />
+    <ImageView
+        android:id="@+id/img_momo"
+        android:layout_width="39dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/momo"
+        app:layout_constraintStart_toStartOf="@id/momo"
+        app:layout_constraintTop_toTopOf="@id/momo" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -109,15 +109,15 @@
         android:background="@drawable/rounded_green"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/momo" />
-        <ImageView
-            android:id="@+id/img_credit"
-            android:layout_width="39dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="12dp"
-            android:src="@drawable/credit_card"
-            app:layout_constraintStart_toStartOf="@id/bank"
-            app:layout_constraintTop_toTopOf="@id/bank" />
+    <ImageView
+        android:id="@+id/img_credit"
+        android:layout_width="39dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/credit_card"
+        app:layout_constraintStart_toStartOf="@id/bank"
+        app:layout_constraintTop_toTopOf="@id/bank" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -130,15 +130,15 @@
         app:layout_constraintTop_toTopOf="@id/bank" />
 
     <!--    <Spinner-->
-<!--        android:id="@+id/spinner_bank"-->
-<!--        android:layout_width="39dp"-->
-<!--        android:layout_height="25dp"-->
-<!--        android:layout_marginEnd="20dp"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/bank"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/bank"-->
-<!--        android:background="@drawable/down_arrow"-->
-<!--        android:spinnerMode="dropdown"/>-->
+    <!--        android:id="@+id/spinner_bank"-->
+    <!--        android:layout_width="39dp"-->
+    <!--        android:layout_height="25dp"-->
+    <!--        android:layout_marginEnd="20dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/bank"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/bank"-->
+    <!--        android:background="@drawable/down_arrow"-->
+    <!--        android:spinnerMode="dropdown"/>-->
 
 
 

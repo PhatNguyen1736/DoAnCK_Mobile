@@ -54,10 +54,13 @@ public class MainActivity extends AppCompatActivity  {
     NavigationView navigationViewRight;
     private RecyclerView rclView;
     ShapeableImageView imgCom, imgLau,  imgTrangmieng;
+    ImageView imgmess, imgnotify;
     public void Inuit(){
         imgCom = findViewById(R.id.img_Com);
         imgLau = findViewById(R.id.img_Lau);
         imgTrangmieng = findViewById(R.id.img_Giaikhat);
+        imgmess = findViewById(R.id.mess);
+        imgnotify = findViewById(R.id.notify);
     }
         @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,10 +81,13 @@ public class MainActivity extends AppCompatActivity  {
                 // Xử lý khi nhấn vào Thực đơn
             } else if (itemId == R.id.giohang_id) {
                 // Xử lý khi nhấn vào Giỏ hàng
-                     opengiohang();
+                    opengiohang();
+            } else if (itemId == R.id.donhang_id) {
+                // Xử lý khi nhấn vào Giỏ hàng
+                    opendonhang();
             } else if (itemId == R.id.bagach_id) {
                 // Xử lý khi nhấn vào Khác
-                openbagach();
+                    openbagach();
             }
             return true;
         });
@@ -110,6 +116,22 @@ public class MainActivity extends AppCompatActivity  {
                 startActivity(intent);
             }
         });
+            imgmess.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Xử lý sự kiện click ở đây, ví dụ chuyển sang trang khác
+                    Intent intent = new Intent(MainActivity.this, trangthaichatshipper_nhahangActivity.class);
+                    startActivity(intent);
+                }
+            });
+            imgnotify.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Xử lý sự kiện click ở đây, ví dụ chuyển sang trang khác
+                    Intent intent = new Intent(MainActivity.this, icon_cai_chuongActivity.class);
+                    startActivity(intent);
+                }
+            });
     }
     // PHAT
     private boolean isMainActivity() {
@@ -129,6 +151,10 @@ public class MainActivity extends AppCompatActivity  {
     }
     private void opengiohang() {
         Intent intent = new Intent(this, CartActivity.class);
+        startActivity(intent);
+    }
+    private void opendonhang() {
+        Intent intent = new Intent(this, trangthaidonhangActivity.class);
         startActivity(intent);
     }
 

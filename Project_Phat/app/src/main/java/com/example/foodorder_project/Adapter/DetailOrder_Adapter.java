@@ -1,6 +1,7 @@
 package com.example.foodorder_project.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.foodorder_project.ChitietMonAnActivity;
 import com.example.foodorder_project.Model.Cart;
 import com.example.foodorder_project.Model.Detail_order;
 import com.example.foodorder_project.R;
@@ -40,6 +42,30 @@ public class DetailOrder_Adapter extends RecyclerView.Adapter<DetailOrder_Adapte
         holder.txtQuantity.setText(listdetail.get(position).getQuantity());
         holder.txtPrice.setText(listdetail.get(position).getPrice());
 //        holder.txtNote.setText(listdetail.get(position).getNote());
+        holder.edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Dựa vào giá trị position để xác định dòng nào được click
+                Intent intent = new Intent(context, ChitietMonAnActivity.class);
+                context.startActivity(intent);
+            }
+        });
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Dựa vào giá trị position để xác định dòng nào được click
+                int deletedPosition = holder.getAdapterPosition();
+
+                // Kiểm tra xem vị trí có hợp lệ không
+                if (deletedPosition != RecyclerView.NO_POSITION) {
+                    // Xóa mục khỏi danh sách
+                    listdetail.remove(deletedPosition);
+
+                    // Thông báo cho RecyclerView biết rằng một mục đã bị xóa
+                    notifyItemRemoved(deletedPosition);
+                }
+            }
+        });
 
     }
 
@@ -53,7 +79,7 @@ public class DetailOrder_Adapter extends RecyclerView.Adapter<DetailOrder_Adapte
     }
 
     public class DetailOrderViewHolder extends RecyclerView.ViewHolder {
-        ImageView FoodPicture;
+        ImageView FoodPicture, edit, delete;
         TextView txtFoodName, txtQuantity, txtPrice, txtNote;
         public DetailOrderViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,6 +88,8 @@ public class DetailOrder_Adapter extends RecyclerView.Adapter<DetailOrder_Adapte
             txtQuantity = itemView.findViewById(R.id.sl);
             txtPrice = itemView.findViewById(R.id.price);
 //            txtNote = itemView.findViewById(R.id.add_note);
+            edit = itemView.findViewById(R.id.edit);
+            delete = itemView.findViewById(R.id.delete);
         }
     }
 

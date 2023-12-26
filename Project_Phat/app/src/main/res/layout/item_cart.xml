@@ -19,7 +19,7 @@
             android:layout_height="110dp"
             android:layout_marginTop="5dp"
             android:layout_marginStart="20dp"
-            app:srcCompat="@drawable/lauthai"
+            app:srcCompat="@drawable/comhaplasen1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 

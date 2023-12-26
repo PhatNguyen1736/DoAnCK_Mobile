@@ -25,7 +25,7 @@ import java.util.List;
 public class ChitietMonAnActivity extends AppCompatActivity {
     MenuChitiet data;
 
-    TextView namefood, soluong, Foodprice, total;
+    TextView namefood, soluong, Foodprice, total, feed;
     ImageView addCart;
     ImageView add , subtract;
     int count = 1;
@@ -40,6 +40,7 @@ public class ChitietMonAnActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.food_detail);
+
         soluong = findViewById(R.id.val);
         total = findViewById(R.id.total);
         radioGroup = findViewById(R.id.radgroup);
@@ -48,6 +49,7 @@ public class ChitietMonAnActivity extends AppCompatActivity {
         small = findViewById(R.id.radS);
         large = findViewById(R.id.radL);
         medium = findViewById(R.id.radM);
+        feed = findViewById(R.id.feedback);
         // Set initial quantity and total price
         soluong.setText(String.valueOf(quantity));
         updateTotalPrice();
@@ -65,6 +67,13 @@ public class ChitietMonAnActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // Gọi phương thức cập nhật giá trị tổng khi có sự thay đổi RadioButton được chọn
                 updateTotalPrice();
+            }
+        });
+        feed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChitietMonAnActivity.this, FeedbackAcivity.class);
+                startActivity(intent);
             }
         });
         ImageView imgFood = findViewById(R.id.img_food);

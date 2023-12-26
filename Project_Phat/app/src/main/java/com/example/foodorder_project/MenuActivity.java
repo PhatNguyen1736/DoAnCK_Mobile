@@ -44,17 +44,17 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.menu1);
 
 
-         rclView = findViewById(R.id.recycler_menu);
-         rclView.setHasFixedSize(true);
-         rclView.setLayoutManager(new LinearLayoutManager(this));
+        rclView = findViewById(R.id.recycler_menu);
+        rclView.setHasFixedSize(true);
+        rclView.setLayoutManager(new LinearLayoutManager(this));
 
-         db = FirebaseFirestore.getInstance();
-         catelist = new ArrayList<>();
-         cateadapter = new CategoryAdapter(MenuActivity.this, catelist);
-         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
-         rclView.setLayoutManager(gridLayoutManager);
-         rclView.setAdapter(cateadapter);
-         EventChangeListener();
+        db = FirebaseFirestore.getInstance();
+        catelist = new ArrayList<>();
+        cateadapter = new CategoryAdapter(MenuActivity.this, catelist);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+        rclView.setLayoutManager(gridLayoutManager);
+        rclView.setAdapter(cateadapter);
+        EventChangeListener();
 
 
 
@@ -73,36 +73,35 @@ public class MenuActivity extends AppCompatActivity {
 //            }
 //        }
 
-        private void EventChangeListener() {
-            db.collection("Menu_Food")
-                    .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                        @Override
-                        public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-                            if (error != null){
-                                Log.e("Firestore error", error.getMessage());
-                                return;
-                            }
+    private void EventChangeListener() {
+        db.collection("Menu_Food")
+                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                        if (error != null){
+                            Log.e("Firestore error", error.getMessage());
+                            return;
+                        }
 
-                            for (DocumentSnapshot dc: value.getDocuments()){
+                        for (DocumentSnapshot dc: value.getDocuments()){
 
-                                Category category = dc.toObject(Category.class);
+                            Category category = dc.toObject(Category.class);
+                            catelist.add(category);
 
-                                catelist.add(category);
-
-                                if (category != null) {
+                            if (category != null) {
 //                                    String nameCategory = category.getNameCategory();
-                                    String image = category.getImage();
+                                String image = category.getImage();
 
 //                                    String imageUrl = dc.getString("https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/295307525_3303048946684112_1855975664910836331_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeESyCsC0ava5BnMM8ttPqFL79qGR2uEVWHv2oZHa4RVYehS4LKgp3vcSanzEKUJwYiGN26g671PXgMGDKYyTxqz&_nc_ohc=aXvJIKbQap0AX9Xpau5&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfBz1KOFFGQXveO2CjkQYcD4xlm-sEccwpiu6A0TLU2PGw&oe=658A8885");
 //                                    Picasso.get().load(imageUrl).into(imageView);
 //                                    Log.d("Category Name", nameCategory);
-                                    Log.d("Image", image);
-                                }
+                                Log.d("Image", image);
                             }
-                            cateadapter.notifyDataSetChanged();
                         }
-                    });
-        }
+                        cateadapter.notifyDataSetChanged();
+                    }
+                });
+    }
 
 //    private List<Category> getListCate() {
 //        List<Category> list = new ArrayList<>();

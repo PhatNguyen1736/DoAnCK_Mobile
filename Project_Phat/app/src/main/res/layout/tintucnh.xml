@@ -5,17 +5,34 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:ignore="UseCompoundDrawables">
+    tools:ignore="UseCompoundDrawables"
+    tools:context=".tintucnhahangActivity">
 
     <!-- Đầu trang "Tin tức từ nhà hàng " -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tin tức từ nhà hàng"
-        android:textSize="20sp"
-        android:padding="16dp"
-        android:gravity="center"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tin tức từ nhà hàng"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView13"-->
+<!--            android:layout_width="41dp"-->
+<!--            android:layout_height="38dp"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:srcCompat="@drawable/back_button"-->
+<!--            android:clickable="true"-->
+<!--            android:contentDescription="back" />-->
+    </RelativeLayout>
 
     <View
         android:layout_width="match_parent"

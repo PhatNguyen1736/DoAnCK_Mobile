@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodorder_project.Adapter.CartAdapter;
 import com.example.foodorder_project.Model.Cart;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -44,7 +45,7 @@ public class CartActivity extends AppCompatActivity {
 
             // Gán dữ liệu vào TextView trong Activity B
             listcart = new ArrayList<Cart>();
-            listcart.add(new Cart(R.drawable.lauthai, receivedData, receivedData1, receivedData2, receivedData4));
+            listcart.add(new Cart(R.drawable.comhaplasen1, receivedData, receivedData1, receivedData2, receivedData4));
         }
         // Truy xuất dữ liệu trong listcart
 //        if (listcart != null && listcart.size() > 0) {
@@ -67,7 +68,7 @@ public class CartActivity extends AppCompatActivity {
         btnthem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(CartActivity.this, MenuChitiet_Activity.class);
+                Intent intent1 = new Intent(CartActivity.this, MenuActivity.class);
                 startActivity(intent1);
             }
         });
@@ -109,6 +110,50 @@ public class CartActivity extends AppCompatActivity {
         });
 
         totalPrice.setText(receivedData2);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.home_id) {
+                // Xử lý khi nhấn vào Trang chủ
+                if (!isMainActivity()) {
+                    openMainActivity();
+                    return true;
+                }
+            } else if (itemId == R.id.menu_id) {
+                openmenu();
+                // Xử lý khi nhấn vào Thực đơn
+            } else if (itemId == R.id.giohang_id) {
+                // Xử lý khi nhấn vào Giỏ hàng
+                opengiohang();
+            } else if (itemId == R.id.bagach_id) {
+                // Xử lý khi nhấn vào Khác
+                openbagach();
+            }
+            return true;
+        });
+    }
+    private boolean isMainActivity() {
+        // Kiểm tra xem đang ở MainActivity hay không
+        return getClass().getSimpleName().equals(MainActivity.class.getSimpleName());
+    }
+    private void openMainActivity() {
+        // Khởi tạo lại MainActivity
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
+    }
+    private void openmenu() {
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+    }
+    private void opengiohang() {
+        Intent intent = new Intent(this, CartActivity.class);
+        startActivity(intent);
+    }
 
+    private void openbagach() {
+        Intent intent = new Intent(this, ThongtinkhacActivity.class);
+        startActivity(intent);
     }
 }

@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.example.foodorder_project.LichsuActivity;
+
 public class MyFragmentAdapter extends FragmentStateAdapter {
     public MyFragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
@@ -16,9 +18,9 @@ public class MyFragmentAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
          if(position == 1)
          {
-             return new Lichsu_Fragment();
+             return new LichsuActivity();
          }
-         return new Hientai_Fragment();
+         return new HientaiActivity();
     }
 
     @Override
